@@ -1,0 +1,8 @@
+require 'sinatra/base'
+require 'haml'
+
+class Eye < Sinatra::Base
+  get '/' do
+    haml "%h1 hello world"
+  end
+end
