@@ -1,13 +1,18 @@
 require 'sinatra/base'
 require 'haml'
+require 'sass'
 
 class Eye < Sinatra::Base
   get '/' do
     haml :index
   end
 
+  get '/css' do
+    sass :css
+  end
+  
   get '/grid/:query' do |qstr|
-    haml :grid, :locals => { :qstr => qstr }
+    haml :grid, :locals => { :qstr => qstr }, :layout => false
   end
 
   get '/problems' do
