@@ -15,6 +15,10 @@ class Eye < Sinatra::Base
     haml :grid, :locals => { :qstr => qstr }, :layout => false
   end
 
+  get '/querytrc/:query' do |qstr|
+    haml "= query(qstr).inspect", :locals => { :qstr => qstr }, :layout => false
+  end
+
   get '/problems' do
     haml :grid, :locals => { :qstr => '(state != "ok")' }
   end
