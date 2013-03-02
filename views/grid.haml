@@ -5,6 +5,7 @@
     %th= "service"
     %th= "state"
     %th= "metric_f"
+    %th= "ttl"
     %th= "tags"
   - query(qstr).each do |event|
     %tr
@@ -13,6 +14,7 @@
       %td= "#{event.service}"
       %td= "#{event.state}"
       %td= "#{"%.2f" % event.metric_f}"
+      %td= "#{event.ttl}"
       %td= "#{event.tags.inspect}"
 
 

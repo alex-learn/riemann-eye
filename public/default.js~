@@ -1,5 +1,0 @@
-$('#query').onkeydown = function () {
-    if keyCode == 13 {
-        $('#response').html = $.get('/grid/' + $('#query').val)
-    }
-}
