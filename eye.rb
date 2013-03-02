@@ -2,6 +2,8 @@ require 'sinatra/base'
 require 'riemann/client'
 
 class Eye < Sinatra::Base
+  set :environment, :test
+
   require_relative 'models/default'
   require_relative 'controllers/default'
 

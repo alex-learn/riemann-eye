@@ -4,7 +4,11 @@ require 'sass'
 
 class Eye < Sinatra::Base
   get '/' do
-    haml :index
+    haml '%h1= "Riemann Eye"'
+  end
+
+  get '/query' do
+    haml :query
   end
 
   get '/css' do
